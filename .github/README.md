@@ -8,4 +8,4 @@ This module holds PTR commands and PTR specific changes, like temp spawns, event
 
 # Updates
 
-The PTR updates at 0AM and 0PM, any changes applied to this module will go live once it restarts after the update is done.
+The PTR updates at 0AM and 0PM daily, any changes applied to this module will go live once it restarts after the update is done.
