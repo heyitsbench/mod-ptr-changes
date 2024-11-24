@@ -622,6 +622,12 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('wp unload',3,'Syntax: .wp unload\nUnload path for selected creature.'),
 ('wpgps',3,'Syntax: .wpgps\r\nOutput current position to sql developer log as partial SQL query to be used in pathing (formated for waypoint_data table).\r\nUse .wpgps sai for waypoint (SAI) table format.');
 
+DELETE FROM `command` WHERE `name` IN ('template apply', 'template disable', 'template enable', 'template list');
+INSERT INTO `command` (`name`, `security`, `help`) VALUES
+('template apply', 0, 'Syntax: .template apply $IndexID\nApplies the given template to your character.'),
+('template disable', 3, 'Syntax: .template disable $IndexID\nDisables the given template from being applied.'),
+('template enable', 3, 'Syntax: .template enable $IndexID\nEnables the given template to be applied.'),
+('template list', 0, 'Syntax: .template list\nList character template sets.');
 
 UPDATE `command` SET `security` = 0 WHERE `name` IN (
 'additem set', 'additem', 'appear', 'aura', 'bags clear', 'bags', 'cast back', 'cast dest', 'cast dist', 'cast self',
